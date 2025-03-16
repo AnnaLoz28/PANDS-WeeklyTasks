@@ -7,12 +7,12 @@ import sys
 
 def count_characters(file_name, char_to_count):
     try:
-        with open (file_name, "r") as f: # I am assuming that the text file exists and opening it in the read mode
+        with open (file_name, 'r') as f: # I am assuming that the text file exists and opening it in the read mode
             content = f.read()
             count = content.count(char_to_count)    
-        print(f"The file {file_name} contains {count} characters {char_to_count}.")
+        print(f'The file {file_name} contains {count} characters {char_to_count}.')
     except FileNotFoundError: # if the file.txt does not exist, an error should be raised
-        print("The file does not exist.")
+        print('The file does not exist.')
 
 
 
@@ -23,4 +23,4 @@ if argument_count < 2: # should have at least 2 arguments or an error will be ra
 
 file_name = sys.argv[1] # defining the argument we want at index [1], i.e. the file_name'
 
-count_characters(file_name, 'e') 
+count_characters(file_name, 'e')
