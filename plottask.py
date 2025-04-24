@@ -10,8 +10,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-rng = np.random.default_rng(seed = 123) # define a seed to always generate the same set of values any time the program is run
-norm_num = rng.normal(5, 2, 1000) # generate an array of 1000 normally distributed values with a mean of 5 and standard deviation of 2
+rng = np.random.default_rng(seed = 123) # generate random numbers with NumPy. Define a seed to always generate the same set of values any time the program is run (https://numpy.org/doc/2.1/reference/random/generator.html)
+norm_num = rng.normal(5, 2, 1000) # generate an array of 1000 normally distributed values with a mean of 5 and standard deviation of 2 (https://numpy.org/doc/2.1/reference/random/generated/numpy.random.normal.html)
 
 # create a histogram plot of the normally distributed numbers and save it to a png file:
 plt.hist(norm_num, color = "red", edgecolor = "black") # set the plot color to red and the bins borders to black

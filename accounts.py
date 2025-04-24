@@ -5,10 +5,16 @@
 
 def account_output (account_number:str):
     masked_number = f"xxxxxx{account_number[-4:]}"
-    print(masked_number)
+    print(masked_number)  
+
 
 account_number = input("Please enter the 10 digit account number: ")
 
+if len(account_number) != 10: # validate the length of the entered account number, it should be 10 digits
+    print("Error! Please enter a valid 10 digit account number.")
+    exit()
+
 account_output(account_number) 
+
 
 
